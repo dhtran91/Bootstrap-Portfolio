@@ -4,17 +4,21 @@
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>About | David Tran</title>
+  <title>Portfolio | David Tran</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
     crossorigin="anonymous">
+  <!-- Animate On Scroll Library https://michalsnik.github.io/aos/ -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
 
-  <nav class="navbar navbar-default navbar-teal">
+  <nav class="navbar navbar-default navbar-inverse navbar-fixed-top">
     <div class="container">
       <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -34,13 +38,13 @@
 
           <ul class="nav navbar-nav navbar-right">
             <li class="nav-link">
-              <a href="index.html">About</a>
+              <a href="#about"><span class="glyphicon glyphicon-user" aria-hidden="true" tabindex="10"></span>About</a>
             </li>
             <li class="nav-link">
-              <a href="portfolio.html">Portfolio</a>
+              <a href="#portfolio"><span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span>Portfolio</a>
             </li>
             <li>
-              <a href="contact.html">Contact</a>
+              <a data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>Contact</a>
             </li>
 
           </ul>
@@ -51,26 +55,57 @@
     </div>
   </nav>
 
-  <div class="container container-content">
+  <div class="container-fluid container-content text-center">
     <div class="row">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+              <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#myCarousel" data-slide-to="1"></li>
+            </ol>
+        
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+              <div class="item active">
+                <img class="profile center-block" src="assets/images/profile.jpg" alt="David Tran">
+                <div class="carousel-caption">
+                  <h3>...</h3>
+                  <p>...</p>
+                </div>
+              </div>
+        
+              <div class="item">
+                <img class="profile center-block" src="assets/images/pic2.jpg" alt="David Tran">
+                <div class="carousel-caption">
+                  <h3>...</h3>
+                  <p>...</p>
+                </div>
+              </div>
+            </div>
+        
+            <!-- Left and right controls -->
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+              <span class="glyphicon glyphicon-chevron-left"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+              <span class="glyphicon glyphicon-chevron-right"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+    </div>
+    <div class="row" data-aos="fade-up" id="about">
       <div class="col-md-12">
         <h1>About Me</h1>
       </div>
-    </div>
-
-    <div class="row">
       <div class="col-md-12">
-
-        <img src="assets/images/profile.jpg" id="profile-pic">
-
-
-        <p>Nurse by night, programmer by day. I always had a interest in technology and futuristic ideas like flying cars, hologram
-          screens, etc. But my parents wanted me to pursue a career in the medical field. I became a nurse in 2016 and have
-          been working in various fields - medical/surgical, pediatrics home health services, and psycholoyy. I like helping
-          people but I couldn't find a field that I was truely passionate about that also helps people. In 2017, I started
-          learning coding on my own using sites such as pluralsight, codeschool, freecodecamp, w3school, and other resources.
-          The more time I spent learning, the more I realized how interesting coding was. I joined a UT coding bootcamp in
-          April 2018 and that was the deciding factor to finally fully transition into becoming a software engineer. </p>
+        <p>Nurse by night, programmer by day. I always had a interest in technology, but my parents wanted me to pursue a career
+          in the medical field. I became a nurse in 2016 and have been working in various fields - medical/surgical, pediatrics
+          home health services, and psycholoyy. I like helping people but I couldn't find a field that I was truely passionate.
+          In 2017, I decided to pick up coding as a hobby and I started learning coding on my own using sites such as pluralsight,
+          codeschool, freecodecamp, w3school, and other resources. The more time I spent learning, the more I realized how
+          interesting coding was. I decided to join a UT coding bootcamp in April 2018 to accelerate my learning and that
+          was when I decided to finally fully transition into becoming a software developer. </p>
         <p>I did my prerequisites at Lone Star community college and University of Houston main campus. I received an assoicate
           of science at Lone Star before going to UT health science center - School of Nursing in 2015. Graduated in 2016
           with a bachelor of science in nursing and I have been working as a nurse ever since.</p>
@@ -78,15 +113,97 @@
 
       </div>
     </div>
+    
+    <div class="row img2">
+    </div>
 
+    <div class="row text-center" id="portfolio" >
+      <div class="col-md-12" data-aos="fade-up">
+        <h1>Portfolio</h1>
+      </div>
+      <div class="col-md-3 col-sm-12 col-xs-6" data-aos="fade-right">
+        <a href="https://dhtran91.github.io/Hunan-Chef/" class="pic" target="_blank">
+          <img src="assets/images/Hunan-chef.png">
+        </a>
+      </div>
+      <div class="col-md-3 col-sm-12 col-xs-6" data-aos="fade-right">
+        <a href="https://dhtran91.github.io/Psychic-Game/" class="pic" target="_blank">
+          <img src="assets/images/Psychic-Game.png">
+        </a>
+      </div>
+      <div class="col-md-3 col-sm-12 col-xs-6" data-aos="fade-right">
+        <a href="https://dhtran91.github.io/Word-Guess-Game/" class="pic" target="_blank">
+          <img src="assets/images/Word-Guess.png">
+        </a>
+      </div>
+      <div class="col-md-3 col-sm-12 col-xs-6" data-aos="fade-right">
+        <a href="https://dhtran91.github.io/Star-Wars-RPG-Game/" class="pic" target="_blank">
+          <img src="assets/images/star-wars-rpg.png">
+        </a>
+      </div>
+      <div class="col-md-3 col-sm-12 col-xs-6" data-aos="fade-right">
+          <a href="" class="pic" target="_blank">
+            <img src="http://via.placeholder.com/150x150">
+          </a>
+        </div>
+        <div class="col-md-3 col-sm-12 col-xs-6" data-aos="fade-right">
+          <a href="" class="pic" target="_blank">
+            <img src="http://via.placeholder.com/150x150">
+          </a>
+        </div>
+        <div class="col-md-3 col-sm-12 col-xs-6" data-aos="fade-right">
+          <a href="" class="pic" target="_blank">
+            <img src="http://via.placeholder.com/150x150">
+          </a>
+        </div>
+        <div class="col-md-3 col-sm-12 col-xs-6" data-aos="fade-right">
+          <a href="" class="pic" target="_blank">
+            <img src="http://via.placeholder.com/150x150">
+          </a>
+        </div>
+    </div>
   </div>
 
-  <footer class="text-center">
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <h4 class="modal-title" id="myModalLabel">Contact</h4>
+        </div>
+        <form>
+          <div class="modal-body">
 
-    Copyright&copy;
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" class="form-control" id="name" placeholder="John Smith" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email address</label>
+              <input type="text" class="form-control" id="email" placeholder="Email" required>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputFile">Message</label>
+              <textarea id="message" class="form-control" rows="10" maxlength="150" required></textarea>
+            </div>
 
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <footer class="container-fluid text-center footer navbar-inverse">
+    Copyright 2018&copy;
   </footer>
-
 
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -94,7 +211,9 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
     crossorigin="anonymous"></script>
 
-
+  <script>
+    AOS.init();
+  </script>
 
 </body>
 
