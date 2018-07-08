@@ -109,7 +109,7 @@
         <p>I did my prerequisites at Lone Star community college and University of Houston main campus. I received an assoicate
           of science at Lone Star before going to UT health science center - School of Nursing in 2015. Graduated in 2016
           with a bachelor of science in nursing and I have been working as a nurse ever since.</p>
-        <p>Relevant technology: ASP.NET/C#, javascript, html, css, jquery, sql, LINQ</p>
+        <p>Relevant technology: ASP.NET/C#, Javascript, HTML5, CSS, JQuery, SQL, LINQ, NodeJS, Angular</p>
 
       </div>
     </div>
@@ -174,7 +174,7 @@
           </button>
           <h4 class="modal-title" id="myModalLabel">Contact</h4>
         </div>
-        <form>
+        <form action= "mailto:dhtran@hotmail.com?subject=Message_Submission" method="post" enctype="text/plain" onsubmit="location.href='thanks.html';">
           <div class="modal-body">
 
             <div class="form-group">
@@ -194,7 +194,8 @@
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary" id="submitMessageForm">Submit</button>
+            
           </div>
         </form>
       </div>
@@ -202,7 +203,17 @@
   </div>
 
   <footer class="container-fluid text-center footer navbar-inverse">
-    Copyright 2018&copy;
+    <div class="row">
+      <div class="col-md-12 contact text-center">
+          <h2>Contact Info</h2>
+          <ul style="list-style-type: none;">
+              <li>Email: <a href="http://www.dhtran@hotmail.com/">dhtran@hotmail.com</a></li>
+              <li>Github: <a href ="https://github.com/dhtran91">dhtran91</a> </li>
+              <li>Portfolio: <a href="https://dhtran91.github.io/Bootstrap-Portfolio/">David Tran's portfolio</a> </li>
+              <li>Copyright 2018&copy;</li>
+          </ul>
+      </div>
+    </div>
   </footer>
 
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -213,6 +224,10 @@
 
   <script>
     AOS.init();
+    // $(document).on('click', '#submitMessageForm', function(event) {
+    //   event.preventDefault();
+
+    // })
   </script>
 
 </body>
